@@ -17,7 +17,7 @@ export const SubHeader = () => {
           </h1>
           <Image
             src="/asset-header.png"
-            alt=""
+            alt="icon-leadster"
             width={0}
             height={0}
             className="absolute w-5 top-7 sm:w-10 sm:top-10 -right-2 sm:right-4 md:right-5 md:top-12"
