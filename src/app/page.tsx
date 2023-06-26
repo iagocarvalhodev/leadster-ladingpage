@@ -1,7 +1,9 @@
+import { SubHeader } from './components/SubHeader/SubHeader'
+
 export default function Home() {
   return (
     <main>
-      <h1>leadster</h1>
+      <SubHeader />
     </main>
   )
 }
