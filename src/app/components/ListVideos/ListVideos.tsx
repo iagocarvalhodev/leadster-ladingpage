@@ -1,5 +1,5 @@
 'use client'
-import { useGetWebinars } from '@/hooks/useGetWebinars'
+import { useGetWebinars } from '../../../hooks/useGetWebinars'
 import { Card } from '../Card/Card'
 import { Pagination } from '../Pagination/Pagination'
 

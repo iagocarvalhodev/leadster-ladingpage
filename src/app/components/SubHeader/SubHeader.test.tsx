@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
 import { SubHeader } from './SubHeader'
-import { test, expect } from '@jest/globals'
-import { toBeInTheDocument } from '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 
 test('waits for subheader texts to be rendered', () => {
   const { getByText, getByAltText } = render(<SubHeader />)
