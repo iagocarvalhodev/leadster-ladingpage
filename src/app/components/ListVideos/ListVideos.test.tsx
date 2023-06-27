@@ -18,3 +18,14 @@ describe('ListVideos', () => {
     expect(screen.getByText(/title/i)).toBeInTheDocument()
   })
 })
+
+describe('FilterButtons', () => {
+  test('renders filter buttons items correctly', () => {
+    render(<ListVideos />)
+    expect(screen.getByText('Agências')).toBeInTheDocument()
+    expect(screen.getByText('Chatbot')).toBeInTheDocument()
+    expect(screen.getByText('Marketing Digital')).toBeInTheDocument()
+    expect(screen.getByText('Geração de Leads')).toBeInTheDocument()
+    expect(screen.getByText('Mídia')).toBeInTheDocument()
+  })
+})

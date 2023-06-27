@@ -18,6 +18,7 @@ export const useGetWebinars = (itemsPerPage: number) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [webinars, setWebinars] = useState<Webinars[]>([])
   const [totalPages, setTotalPages] = useState(0)
+  const [filterType, setFilterType] = useState<string | null>(null)
 
   useEffect(() => {
     api.get('webinars.json').then((res) => {
@@ -27,10 +28,17 @@ export const useGetWebinars = (itemsPerPage: number) => {
 
       const startIndex = (currentPage - 1) * itemsPerPage
       const endIndex = startIndex + itemsPerPage
-      const webinarsData = jsonData.slice(startIndex, endIndex)
+      // const webinarsData = jsonData.slice(startIndex, endIndex)
+      const webinarsData = jsonData
+        .slice(startIndex, endIndex)
+        .filter(
+          (webinar: Webinars) =>
+            filterType === null || webinar.type === filterType
+        )
+
       setWebinars(webinarsData)
     })
-  }, [currentPage, itemsPerPage])
+  }, [currentPage, itemsPerPage, filterType])
 
   const goToPage = (page: number) => {
     setCurrentPage(page)
@@ -44,6 +52,11 @@ export const useGetWebinars = (itemsPerPage: number) => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1))
   }
 
+  const setFilter = (type: string | null) => {
+    setFilterType(type)
+    setCurrentPage(1)
+  }
+
   return {
     webinars,
     currentPage,
@@ -51,5 +64,6 @@ export const useGetWebinars = (itemsPerPage: number) => {
     goToPage,
     nextPage,
     prevPage,
+    setFilter,
   }
 }
