@@ -12,20 +12,21 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Teste de Desenvolvimento Leadster
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Neste projeto utilizei o Next.js 13 com tailwind utilizei o padrão Feature Fold Pattern
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Neste projeto todos os componentes com testes utilizando Jest e o CI Configurado no github Actions para verificação de todos os commites
 
-## Learn More
+Todo o Eslint com o prettier configurado.
 
-To learn more about Next.js, take a look at the following resources:
+## Não terminado
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fiz o Desenvolvimento mais não consegui terminar em tempo habil
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ESTOU UTILIZANDO O LIVE SERVER DO VSCODE PARA SIMULAR UM SERVIDOR PARA O ARQUIVO WEBINAR.JSON
+
+iagocarvalhoweb@gmail.com
 
 ## Deploy on Vercel
 
